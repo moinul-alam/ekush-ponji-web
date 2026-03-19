@@ -29,8 +29,8 @@
 
   <!-- ─── FAVICON ──────────────────────────────────────────────── -->
   <!-- TODO: Add Ekush Ponji app icon as assets/icon.png -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="apple-touch-icon"      href="assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon"      href="assets/icon.png" />
 
   <!-- ─── FONTS ────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,6 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
 
   <!-- ─── STYLES ───────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- ─── GOOGLE ANALYTICS ─────────────────────────────────────── -->
@@ -54,28 +55,12 @@
 </head>
 <body>
 
-  <!-- ─── NAVBAR ───────────────────────────────────────────────── -->
-  <nav id="navbar">
-    <a href="https://ekushlabs.com" class="nav-back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
-      </svg>
-      <span>EkushLabs</span>
-    </a>
-    <a href="#" class="nav-brand">
-      <span class="nav-name">Ekush <span class="accent">Ponji</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#screenshots">Screenshots</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="#support">Support</a></li>
-    </ul>
-  </nav>
+  <!-- ─── NAVBAR (injected by components.js) ───────────────────── -->
+  <div id="navbar-placeholder"></div>
 
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
   <section id="hero">
-    <div class="hero-bg-shape" aria-hidden="true"></div>
+    <div class="hero-bg-shape"   aria-hidden="true"></div>
     <div class="hero-bg-shape-2" aria-hidden="true"></div>
 
     <div class="hero-content">
@@ -91,8 +76,7 @@
       </h1>
 
       <p class="hero-tagline">
-        Ekush Ponji brings together the Bengali & Gregorian calendars, events, reminders, daily quotes, words, and more — all in one beautifully designed app.
-      </p>
+Ekush Ponji brings together the Bengali, Gregorian, and Hijri calendars, alongside events, reminders, daily quotes, and more — all in one beautifully designed app.      </p>
 
       <div class="hero-actions">
         <!-- TODO: Replace # with actual Play Store URL when live -->
@@ -135,7 +119,8 @@
     <div class="hero-phone" aria-hidden="true">
       <div class="phone-mockup">
         <div class="phone-screen">
-          <!-- TODO: Replace with actual app screenshot -->
+          <!-- TODO: Replace with actual screenshot:
+               <img src="assets/screenshots/home.png" alt="Ekush Ponji Home Screen" /> -->
           <div class="phone-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -165,8 +150,19 @@
             <path d="M16 2v4M8 2v4M3 10h18"/>
           </svg>
         </div>
-        <h3 class="feature-title">Dual Calendar</h3>
-        <p class="feature-desc">View Bengali & Gregorian dates side by side. Never lose track of important dates in either calendar system.</p>
+        <h3 class="feature-title">Multi Calendar</h3>
+        <p class="feature-desc">View Bengali, Gregorian, and Hijri dates side-by-side with official government holidays. Never lose track of important dates, no matter which calendar system you use.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Official Government Holidays</h3>
+        <p class="feature-desc">Access the complete list of official holidays for the entire year, meticulously organized and updated according to the latest government circulars.</p>
       </div>
 
       <div class="feature-card reveal">
@@ -175,7 +171,7 @@
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3 class="feature-title">Events & Reminders</h3>
+        <h3 class="feature-title">Events &amp; Reminders</h3>
         <p class="feature-desc">Create personal events and set reminders so you never miss what matters — birthdays, meetings, or anything in between.</p>
       </div>
 
@@ -218,7 +214,7 @@
             <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
           </svg>
         </div>
-        <h3 class="feature-title">Dark & Light Mode</h3>
+        <h3 class="feature-title">Dark &amp; Light Mode</h3>
         <p class="feature-desc">Switch between dark and light themes to match your preference or environment at any time.</p>
       </div>
 
@@ -251,7 +247,7 @@
           </svg>
         </div>
         <h3 class="feature-title">Real-time Updates</h3>
-        <p class="feature-desc">Quotes, words, and content refresh automatically in real time when you're connected.</p>
+        <p class="feature-desc">Government Holiday lists, Quotes, words - all contents refresh automatically in real time when you're connected.</p>
       </div>
 
     </div>
@@ -264,8 +260,9 @@
       <h2 class="section-title">Designed for<br/><span class="accent">everyday use.</span></h2>
     </div>
 
-    <!-- TODO: Replace placeholder cards with actual <img> screenshots -->
-    <!-- Screenshot image size recommendation: 390x844px (standard phone) -->
+    <!-- TODO: Replace placeholder cards with actual screenshots
+         Usage: <img src="assets/screenshots/name.png" alt="Description" />
+         Recommended size: 390x844px -->
     <div class="screenshots-row">
       <div class="screenshot-card reveal">
         <div class="screenshot-placeholder">
@@ -323,13 +320,13 @@
     </div>
   </section>
 
-  <!-- ─── PRIVACY ───────────────────────────────────────────────── -->
+  <!-- ─── PRIVACY TEASER ───────────────────────────────────────── -->
   <section id="privacy">
     <div class="privacy-teaser reveal">
       <div class="privacy-teaser-left">
         <p class="section-label">Legal</p>
         <h2 class="section-title">Privacy Policy</h2>
-        <p class="privacy-teaser-desc">We believe in full transparency about how your data is handled. Ekush Ponji collects no personal information. Your data stays on your device. Read our full privacy policy to learn exactly what we do and don't collect.</p>
+        <p class="privacy-teaser-desc">We believe in full transparency. Ekush Ponji collects no personal information — your data stays on your device. Read our full privacy policy to understand exactly what we do and don't collect.</p>
         <a href="privacy.html" class="btn-privacy">
           Read Full Privacy Policy
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -366,22 +363,24 @@
   <section id="support">
     <div class="support-inner reveal">
       <p class="section-label center">Need help?</p>
-      <h2 class="section-title">Support</h2>
+      <h2 class="section-title center">Support</h2>
       <p class="support-sub">Have a bug to report, a feature to suggest, or just need help? Reach out — we're happy to assist.</p>
-      <a href="/cdn-cgi/l/email-protection#14676164647b666054717f61677c787576673a777b79" class="contact-email">
+      <a href="mailto:ekushlabs@gmail.com" class="contact-email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
           <polyline points="22,6 12,13 2,6"/>
         </svg>
-        <span><span class="__cf_email__" data-cfemail="d5a6a0a5a5baa7a195b0bea0a6bdb9b4b7a6fbb6bab8">[email&#160;protected]</span></span>
+        <span>ekushlabs@gmail.com</span>
       </a>
     </div>
   </section>
 
-  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
-  <footer id="footer">
-    <a href="https://ekushlabs.com" class="footer-brand">
-      <span class="footer-name">Ekush<span class="accent">Labs</span></span>
-    </a>
-    <span class="footer-app">Ekush Ponji</span>
-    <span class="footer-copy">© <span id="footer-year"></span> EkushLabs.
+  <!-- ─── FOOTER (injected by components.js) ───────────────────── -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ─── SCRIPTS ───────────────────────────────────────────────── -->
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
