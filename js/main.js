@@ -1,3 +1,8 @@
+// Force HTTPS
+if (location.protocol === 'http:') {
+  location.replace('https:' + window.location.href.substring(5));
+}
+
 /* ============================================================
    Ekush Ponji — main.js
    Structure:
