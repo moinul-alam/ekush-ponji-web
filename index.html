@@ -29,8 +29,8 @@
 
   <!-- ─── FAVICON ──────────────────────────────────────────────── -->
   <!-- TODO: Add Ekush Ponji app icon as assets/icon.png -->
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon"      href="assets/icon.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon"      href="assets/apple-touch-icon.png" />
 
   <!-- ─── FONTS ────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +68,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#screenshots">Screenshots</a></li>
-      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
       <li><a href="#support">Support</a></li>
     </ul>
   </nav>
@@ -325,50 +325,40 @@
 
   <!-- ─── PRIVACY ───────────────────────────────────────────────── -->
   <section id="privacy">
-    <div class="section-header reveal">
-      <p class="section-label">Legal</p>
-      <h2 class="section-title">Privacy Policy</h2>
-    </div>
-
-    <div class="privacy-content reveal">
-
-      <div class="privacy-block">
-        <h3>Information We Collect</h3>
-        <p>Ekush Ponji collects minimal data necessary to provide its services. This includes app usage data for performance improvement and crash reporting. We do not collect personally identifiable information without your explicit consent.</p>
+    <div class="privacy-teaser reveal">
+      <div class="privacy-teaser-left">
+        <p class="section-label">Legal</p>
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="privacy-teaser-desc">We believe in full transparency about how your data is handled. Ekush Ponji collects no personal information. Your data stays on your device. Read our full privacy policy to learn exactly what we do and don't collect.</p>
+        <a href="privacy.html" class="btn-privacy">
+          Read Full Privacy Policy
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
-
-      <div class="privacy-block">
-        <h3>Data Storage</h3>
-        <p>Your personal data — including events, reminders, and saved content — is stored locally on your device. We do not store your personal data on external servers without your knowledge.</p>
+      <div class="privacy-teaser-right">
+        <div class="privacy-pill good">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          No personal data collected
+        </div>
+        <div class="privacy-pill good">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Your data stays on your device
+        </div>
+        <div class="privacy-pill good">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          No account required
+        </div>
+        <div class="privacy-pill good">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Delete your data anytime
+        </div>
+        <div class="privacy-pill neutral">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Ads served by Google AdMob
+        </div>
       </div>
-
-      <div class="privacy-block">
-        <h3>Third-Party Services</h3>
-        <p>Ekush Ponji uses Firebase for real-time content delivery (quotes, words). Firebase may collect anonymised usage data in accordance with Google's privacy policy. We do not sell or share your data with any third parties for advertising purposes.</p>
-      </div>
-
-      <div class="privacy-block">
-        <h3>Permissions</h3>
-        <p>The app may request access to notifications for reminders and internet access for real-time content updates. All permissions are used solely for the stated purpose and nothing else.</p>
-      </div>
-
-      <div class="privacy-block">
-        <h3>Children's Privacy</h3>
-        <p>Ekush Ponji does not knowingly collect data from children under the age of 13. If you believe your child has provided personal information, please contact us immediately.</p>
-      </div>
-
-      <div class="privacy-block">
-        <h3>Changes to This Policy</h3>
-        <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated effective date. Continued use of the app constitutes acceptance of any changes.</p>
-      </div>
-
-      <div class="privacy-block">
-        <h3>Contact</h3>
-        <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:support@ekushlabs.com">support@ekushlabs.com</a>.</p>
-      </div>
-
-      <p class="privacy-date">Last updated: <span id="privacy-date"></span></p>
-
     </div>
   </section>
 
@@ -378,12 +368,12 @@
       <p class="section-label center">Need help?</p>
       <h2 class="section-title">Support</h2>
       <p class="support-sub">Have a bug to report, a feature to suggest, or just need help? Reach out — we're happy to assist.</p>
-      <a href="mailto:support@ekushlabs.com" class="contact-email">
+      <a href="/cdn-cgi/l/email-protection#14676164647b666054717f61677c787576673a777b79" class="contact-email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
           <polyline points="22,6 12,13 2,6"/>
         </svg>
-        <span>support@ekushlabs.com</span>
+        <span><span class="__cf_email__" data-cfemail="d5a6a0a5a5baa7a195b0bea0a6bdb9b4b7a6fbb6bab8">[email&#160;protected]</span></span>
       </a>
     </div>
   </section>
@@ -394,11 +384,4 @@
       <span class="footer-name">Ekush<span class="accent">Labs</span></span>
     </a>
     <span class="footer-app">Ekush Ponji</span>
-    <span class="footer-copy">© <span id="footer-year"></span> EkushLabs. All rights reserved.</span>
-  </footer>
-
-  <!-- ─── SCRIPTS ───────────────────────────────────────────────── -->
-  <script src="js/main.js" defer></script>
-
-</body>
-</html>
+    <span class="footer-copy">© <span id="footer-year"></span> EkushLabs.

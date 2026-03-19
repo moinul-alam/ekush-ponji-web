@@ -691,6 +691,107 @@ section {
 }
 
 
+/* ─── 11b. PRIVACY TEASER ───────────────────────────────────── */
+#privacy {
+  background: var(--surface);
+}
+
+.privacy-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.privacy-teaser-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 1rem 0 2rem;
+}
+
+.btn-privacy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-light);
+  border: 1px solid var(--green-mid);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.btn-privacy svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  transition: transform var(--transition);
+}
+
+.btn-privacy:hover {
+  background: var(--green);
+  color: var(--white);
+  border-color: var(--green);
+  box-shadow: var(--shadow);
+}
+
+.btn-privacy:hover svg {
+  transform: translateX(4px);
+}
+
+.privacy-teaser-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.privacy-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.privacy-pill svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.privacy-pill.good {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border: 1px solid var(--green-mid);
+}
+
+.privacy-pill.good svg {
+  stroke: var(--green);
+}
+
+.privacy-pill.neutral {
+  background: #FFF8E6;
+  color: #7A5C00;
+  border: 1px solid #FFE9A0;
+}
+
+.privacy-pill.neutral svg {
+  stroke: #C49000;
+}
+
+@media (max-width: 900px) {
+  .privacy-teaser {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
 /* ─── 12. SUPPORT SECTION ───────────────────────────────────── */
 #support {
   background: var(--white);
