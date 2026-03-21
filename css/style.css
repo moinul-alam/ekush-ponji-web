@@ -255,8 +255,8 @@ h4 {
   width: 260px;
   height: 576px;
   background: var(--text-primary);
-  border-radius: 36px;
-  padding: 14px;
+  border-radius: 30px;
+  padding: 6px;
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(0, 0, 0, 0.1);
   position: relative;
 }
