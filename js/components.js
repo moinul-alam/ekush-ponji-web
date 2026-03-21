@@ -1,9 +1,10 @@
 /* ============================================================
    Ekush Ponji — components.js
-   Fetches and injects shared navbar and footer into any page.
    Structure:
    1. Component Loader
-   2. Active Nav Link Highlighter
+   2. Footer Year
+   3. Active Nav Link Highlighter
+   4. Navbar Scroll Effect
 ============================================================ */
 
 
@@ -22,7 +23,6 @@ async function loadComponent(placeholderId, componentPath) {
   }
 }
 
-// Load navbar and footer, then run post-load setup
 Promise.all([
   loadComponent('navbar-placeholder', '/components/navbar.html'),
   loadComponent('footer-placeholder', '/components/footer.html'),
@@ -41,16 +41,20 @@ function setFooterYear() {
 
 
 /* ─── 3. ACTIVE NAV LINK HIGHLIGHTER ───────────────────────── */
-// Adds .active class to the nav link matching current page
+// Only marks privacy.html as active — anchor links (#section)
+// are hover-only, never permanently active
 function highlightActiveNavLink() {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-links a');
 
   navLinks.forEach(link => {
-    const linkPath = new URL(link.href).pathname;
-    if (currentPath === linkPath) {
-      link.classList.add('active');
-    }
+    try {
+      const url = new URL(link.href);
+      // Only activate if it's a real page (not an anchor link)
+      if (!url.hash && url.pathname !== '/' && url.pathname === currentPath) {
+        link.classList.add('active');
+      }
+    } catch (e) { }
   });
 }
 
